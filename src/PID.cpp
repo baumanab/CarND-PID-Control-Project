@@ -6,6 +6,8 @@ using namespace std;
 * TODO: Complete the PID class.
 */
 
+// Note:  Some code inspred by project walk-through
+
 PID::PID() {}
 
 PID::~PID() {}
@@ -21,7 +23,7 @@ void PID::Init(double Kp, double Ki, double Kd) {
 }
 
 void PID::UpdateError(double cte) {
-   // TODO Add link to Sebastion lecure and make sure this is consitent
+  
    i_error += cte;
    d_error = cte - p_error;
    p_error = cte;
